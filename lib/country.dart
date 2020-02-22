@@ -2302,6 +2302,12 @@ class Country {
     );
   }
 
+  static findByDialCode(String dialCode) {
+    return ALL.singleWhere(
+          (item) => item.dialingCode == dialCode,
+    );
+  }
+
   /// Creates a copy with modified values
   Country copyWith({
     String name,
